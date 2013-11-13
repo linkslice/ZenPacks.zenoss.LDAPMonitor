@@ -92,7 +92,7 @@ class LDAPMonitorDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
         if self.ldapBindDN:
             parts.append('-D "%s"' % self.ldapBindDN)
         if self.ldapBindPassword:
-            parts.append('-P "%s"' % self.ldapBindPassword)
+            parts.append('-P \'%s\'' % self.ldapBindPassword)
         if self.ldapBindVersion:
             parts.append('--ver%s' % str(self.ldapBindVersion))
         if self.port:
